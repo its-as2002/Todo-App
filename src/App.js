@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import Header from "./Components/Header";
 import Body from "./Components/Body";
 import Footer from "./Components/Footer";
+import { createBrowserRouter,RouterProvider } from "react-router-dom";
 const App = () => {
     return (
         <div className="flex flex-col min-h-screen overflow-hidden">
@@ -15,6 +16,12 @@ const App = () => {
     );
 };
 
+const appRouter = createBrowserRouter([
+    {
+        path:'/',
+        element : <App />
+    }
+])
 
 const root = ReactDOM.createRoot(document.querySelector(".root"));
-root.render(<App />);
+root.render(<RouterProvider router={appRouter}/>);
