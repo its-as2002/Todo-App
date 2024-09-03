@@ -49,7 +49,7 @@ const AddTask = () => {
 							}
 							setTaskList([
 								...taskList,
-								{ taskName, taskDescription, id: uuidv4(), deleteTask },
+								{ taskName, taskDescription, id: uuidv4() },
 							]);
 							setTaskName("");
 							setTaskDescription("");
@@ -58,8 +58,8 @@ const AddTask = () => {
 					</button>
 				</div>
 			</div>
-			<ShowTask taskList={taskList} />
+			<ShowTask taskList={taskList} deleteTask={deleteTask} />
 		</div>
 	);
-};
+}
 export default AddTask;

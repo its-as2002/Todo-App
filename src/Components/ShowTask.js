@@ -1,6 +1,7 @@
 import Task  from "./Task";
 const ShowTask = (props) => {
-	const { taskList } = props;
+	const { taskList,deleteTask } = props;
+	
 
 	return (
 		<div className="flex flex-col">
@@ -15,7 +16,7 @@ const ShowTask = (props) => {
 			</div>
 			<div>
 				{taskList.map((taskData,index) => (
-					<Task data={taskData} index={index} key={taskData.id} />
+					<Task data={taskData} deleteTask={deleteTask} index={index} key={taskData.id} />
 				))}
 			</div>
 		</div>
