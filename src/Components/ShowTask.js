@@ -5,16 +5,19 @@ const ShowTask = (props) => {
 	return (
 		<div className="flex flex-col">
 			<div className="bg-cyan-500 flex w-full">
-				<div className="py-4 w-[10%] text-white font-bold text-center ">
+				<div className="py-4 w-[10%] text-white font-bold border-x-2 text-center ">
 					No.
 				</div>
 
-				<h1 className="text-white font-bold py-4 w-[20%]  text-center">
+				<h1 className="text-white font-bold py-4 w-[20%]  border-x-2 text-center">
 					Task Name
 				</h1>
 
-				<h1 className="text-white font-bold py-4 w-[60%] text-center">
+				<h1 className="text-white font-bold py-4 w-[60%] text-center border-x-2">
 					Task Description
+				</h1>
+				<h1 className="text-white font-bold py-4 w-[10%] text-center border-x-2">
+					Delete
 				</h1>
 			</div>
 			<div>
